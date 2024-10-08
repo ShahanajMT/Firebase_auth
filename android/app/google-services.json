@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1036658785317",
+    "project_id": "userauth-8c73a",
+    "storage_bucket": "userauth-8c73a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036658785317:android:a6999fac704e3d997e53cc",
+        "android_client_info": {
+          "package_name": "com.example.userauth_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1rp4Pk2MKKvDR72_1wYdEyWxYInHqvaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
