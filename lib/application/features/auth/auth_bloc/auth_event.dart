@@ -17,3 +17,5 @@ class SigupEvent extends AuthEvent {
 
   SigupEvent({required this.user});
 }
+
+class LogOutEvent extends AuthEvent {}

@@ -59,11 +59,11 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hintText,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-            borderSide: const BorderSide(color: Colors.white)
+            borderSide: const BorderSide(color: Colors.indigo)
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.white)
+          borderSide: const BorderSide(color: Colors.blue)
         ),
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.obscureText ? IconButton(

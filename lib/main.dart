@@ -21,17 +21,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(scaffoldBackgroundColor: Colors.grey,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         textTheme: const TextTheme(
           displayLarge: TextStyle(
-            fontSize: 26,
+            fontSize: 24,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
           bodySmall: TextStyle(
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
@@ -42,9 +43,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashPageWrapper(),
-        '/register': (context) => const RegisterPage(),
+        '/register': (context) => const RegisterPageWeapper(),
         '/login': (context) => const LoginPage(),
-        '/home': (context) => const HomePage(),
+        '/home': (context) => const HomePageWrapper(),
       },
     );
   }
