@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
         child: MaterialButton(onPressed: () {
           final auth = BlocProvider.of<AuthBloc>(context);
           auth.add(LogOutEvent());
-          Navigator.of(context).pushReplacementNamed('/login');
+          Navigator.of(context).pushNamedAndRemoveUntil( '/login', (route) => false);
         } , child: const Icon(Icons.logout),),
       ),
     );

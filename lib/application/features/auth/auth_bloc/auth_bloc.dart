@@ -60,10 +60,29 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     //! ======= LogOut ============ !//
 
-    on<LogOutEvent> ((event, emit) async{
+    on<LogOutEvent>(
+      (event, emit) async {
+        try {
+          await _auth.signOut();
+          emit(UnAuthenticate());
+        } catch (e) {
+          emit(AuthenticatedError(message: e.toString()));
+        }
+      },
+    );
+
+    //! ======= LogIn  ========== !/
+    on<LoginEvent> ((event, emit) async {
+      emit(AuthLoading());
       try {
-        await _auth.signOut();
-        emit(UnAuthenticate());
+        final userCredential = await _auth.signInWithEmailAndPassword(email: event.email, password: event.password);
+        final user = userCredential.user;
+
+        if (user != null) {
+          emit(Authenticated(user: user));
+        } else {
+          emit(UnAuthenticate());
+        }
       } catch (e) {
         emit(AuthenticatedError(message: e.toString()));
       }
